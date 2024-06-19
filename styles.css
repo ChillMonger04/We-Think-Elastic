@@ -1,0 +1,602 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Questrial", sans-serif;
+}
+
+*::selection {
+  background-color: #f3c77c4f;
+}
+
+@font-face {
+  font-family: "a";
+  src: url("./res/aa.ttf");
+}
+
+@font-face {
+  font-family: "hl";
+  src: url("./res/helveticaneue.woff2");
+}
+@font-face {
+  font-family: "ivy";
+  src: url("./res/ivy.ttf");
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#main {
+  /* width: 100%;
+    height: 100%; */
+  /* As we are applying Locomotive JS */
+  background-color: #151414;
+}
+
+#loader {
+  width: 100%;
+  height: 100vh;
+  background-color: #f3c77c;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader img {
+  height: 17.3vw;
+}
+
+#nav {
+  z-index: 9999;
+  height: 6.9vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw 2.7vw;
+}
+
+#nav #nav-svg {
+  margin-left: -1.5vw;
+}
+
+#nav #nav-links {
+  display: flex;
+  align-items: center;
+  gap: 5.69vw;
+  cursor: pointer;
+}
+
+#nav #nav-links h4 {
+  font-size: 1.38vw;
+  z-index: 999;
+  transition: all linear 0.2s;
+  font-weight: 300;
+  color: #e7cfb1;
+}
+
+#nav #nav-links h4:hover {
+  color: #e5813e;
+}
+
+#page1 {
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+#page1 h1 {
+  /* background-color: brown; */
+  /* to make the heading come upwards */
+  margin-top: -7.76vw;
+  color: #f3c77c;
+  display: flex;
+  font-weight: 900;
+  /* for the come up effect */
+  overflow: hidden;
+  line-height: -1;
+}
+
+/* this is when we segregate each of the letters of the heading into h1 */
+#page1 h1 h1 {
+  font-family: a;
+  font-weight: 900;
+  line-height: -1.3;
+  color: #f3c77c;
+  font-size: 89.5vh;
+}
+
+#page1 #page1-bottom-text {
+  margin-top: -5.56vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#page1 #page1-bottom-text .page1-h2-text {
+  /* background-color: darkorange; */
+  height: fit-content;
+  /* for the come up effect */
+  overflow: hidden;
+}
+
+#page1 #page1-bottom-text .page1-h2-text h2 {
+  /* background-color: darkorange; */
+  text-align: center;
+  font-size: 2.37vw;
+  font-weight: 300;
+  color: #f3c77c;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page2 video {
+  height: 100vh;
+  object-fit: cover;
+  /* for the grow on scroll effect */
+  width: 30%;
+}
+
+#page3 {
+  width: 100%;
+}
+
+#page3 #page3-content {
+  padding: 8.3vw 2.7vw;
+  width: 100%;
+  /* background-color: darksalmon; */
+}
+
+#page3 #page3-content h1 {
+  font-size: 13.5vw;
+  line-height: 12vw;
+  letter-spacing: -0.3vw;
+  font-family: hl;
+  color: #e7cfb1;
+}
+
+#page3-content h1 span {
+  font-family: ivy;
+  color: #e7cfb1;
+}
+
+#page3 #page3-content h1:nth-child(3) {
+  margin-left: 28.4vw;
+}
+
+#page3 #page3-content #page3-bottom-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* background-color: saddlebrown; */
+}
+
+#page3 #page3-content #page3-bottom-text h3 {
+  margin-top: 4.8vw;
+  font-size: 1.3vw;
+  font-weight: 400;
+  margin-right: 3.47vw;
+  color: #e7cfb1;
+}
+
+#page4 {
+  padding: 4.16vw;
+  width: 100%;
+}
+
+#page4 #page4-circle-svg {
+  position: relative;
+  margin-top: 6.9vw;
+  margin-left: 80vw;
+  /* background-color: saddlebrown; */
+}
+
+#page4 #svg-circle {
+  animation: svgAnime 5.5s linear infinite;
+}
+
+#page4-circle-svg #svg-arrow {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+
+#page4-top-media-container {
+  position: relative;
+  /* background-color: darkorange; */
+  margin-top: -9vw;
+}
+
+#page4-top-media-container .media-container {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#page4-top-media-container .hover-effect {
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.2s;
+}
+
+#page4 #page4-top-media-container #vid-container1 {
+  overflow: hidden;
+  width: 51.38vw;
+  height: 48.26vw;
+}
+
+#page4 #vid-container1 video {
+  height: 41.31vw;
+  margin-top: 6.9vw;
+  object-fit: cover;
+  width: 51.38vw;
+  object-position: center;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.2s;
+}
+
+/* This is applied to all the bottom text of the projects */
+#page4-top-media-container h3 {
+  font-size: 1.38vw;
+  margin-top: 0.69vw;
+  font-weight: 400;
+  color: white;
+}
+
+#page4-top-media-container h3 span {
+  font-size: 1.52vw;
+  margin-top: 0.69vw;
+  color: white;
+  font-weight: 400;
+}
+
+#page4-top-media-container #img-container1 {
+  overflow: hidden;
+  height: 34.79vw;
+  width: 35vw;
+  /* to make it go to the left end */
+  margin-left: 57vw;
+  margin-top: -9vw;
+}
+
+#page4-top-media-container #img-container1 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.2s;
+}
+
+#page4-top-media-container #img-container1-text {
+  margin-left: 57vw;
+}
+
+#page4-top-media-container #img-container2 {
+  height: 34.3vw;
+  /* background-color: darkred; */
+  width: 37.15vw;
+   margin-top: -9vw;
+}
+
+#page4-top-media-container #img-container2 img {
+  object-fit: cover;
+  height: 100%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.2s;
+  width: 100%;
+}
+
+#page4-top-media-container #img-container3 {
+  height: 41.66vw;
+  width: 47.22vw;
+  margin-top: -12vw;
+  margin-left: 44vw;
+  /* background-color: darksalmon; */
+}
+
+#page4-top-media-container #img-container3 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#page4-top-media-container #img-container3-text {
+  margin-left: 44vw;
+}
+
+.hover-effect:hover {
+  scale: 0.98;
+  object-fit: cover;
+}
+
+#page4-bottom-media-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+#page4-bottom-media-container h3 span {
+  font-weight: 400;
+  font-size: 1.52vw;
+  color: white;
+  margin-bottom: 0.2vw;
+}
+
+#page4-bottom-media-container h3 {
+  padding: 0 3.9vw;
+  width: 100%;
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.38vw;
+  color: white;
+  margin-bottom: 9vw;
+}
+
+#page4-bottom-video-container {
+  height: 50.1vw;
+  width: 11.29%;
+  margin-top: 4vw;
+  /* background-color: #e5813e; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.8s;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#page4-bottom-video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#page4-bottom-video-container:hover {
+  scale: 0.98;
+}
+
+#page4-bottom-button {
+  padding: 10.4vw 0;
+  width: 100%;
+  height: 30vh;
+  color: #e7cfb1;
+  cursor: pointer;
+  /* Gave it display flex so upon position absolute the border div is centered */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* for the border div and the text div*/
+  position: relative;
+}
+
+#page4-bottom-button h1 {
+  /* so that it comes at the center */
+  position: absolute;
+  text-transform: uppercase;
+  line-height: 1.66vw;
+  font-size: 1.73vw;
+  font-weight: 400;
+}
+
+/* We made the div separate and the text separate because we only want the div to rotate not the text */
+/* If we created the text between the div than the text will also rotate */
+#page4-bottom-button #page4-bottom-button-border {
+  width: 22.22vw;
+  height: 7.63vw;
+  padding: 3vw 2vw;
+  transform-origin: center;
+  border: 0.069vw solid #e7cfb1;
+  border-radius: 50%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+  position: absolute;
+  /* so it comes above the h1 */
+  z-index: 9999;
+}
+
+/* When the hover on the div we want it to be rotated */
+#page4-bottom-button-border:hover {
+  rotate: -15deg;
+  transform: scale(1.1);
+  height: 100%;
+}
+
+#page5 {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #9ac1cb;
+}
+
+#page5 #page5-text-scroll h1 {
+  color: #151414;
+  font-family: hl;
+  font-weight: 600;
+  font-size: 45vw;
+}
+
+/* this is for all the svg img */
+#page5 #page5-text-scroll img {
+  height: 18.75vw;
+  position: absolute;
+}
+
+#page5 #page5-text-scroll #page5-svg1 {
+  top: 62.3%;
+  left: 17.8%;
+  rotate: 9deg;
+}
+
+#page5 #page5-text-scroll #page5-svg2 {
+  top: 5%;
+  height: 16.6vw;
+  left: 48.5%;
+  rotate: 13deg;
+}
+
+#page5 #page5-text-scroll #page5-svg3 {
+  top: 65%;
+  left: 75%;
+}
+
+#page6 {
+  height: 70vh;
+  margin-top: -1vw;
+  background-color: #9ac1cb;
+  width: 100%;
+  display: flex;
+  gap: 0.69vw;
+}
+
+#page6 .page6-content-box {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: darkolivegreen; */
+  padding: 4.8vw;
+  justify-content: flex-start;
+  gap: 1.38vw;
+  height: fit-content;
+}
+
+#page6 .page6-content-box h2 {
+  font-weight: 500;
+  font-size: 1.8vw;
+  color: #151414;
+}
+
+#page6 .page6-content-box .page6-content-box-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+}
+
+#page6 .page6-content-box .page6-content-box-list h4 {
+  font-size: 1.68vw;
+  font-weight: 400;
+  color: #394346;
+}
+
+#page7 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #151414;
+  padding: 12.5vw 10vw;
+}
+
+#page7 #page7-brand-container{
+    display: flex;
+    flex-direction: column;
+    gap: 11.11vw;
+}
+
+#page7 .page7-company-row {
+  width: 100%;
+  /* background-color: slategray; */
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#page8 {
+  background-color: #e7cfb1;
+  width: 100%;
+  padding-top: 9vw;
+}
+
+#page8 #page8-content .page8-text-box {
+  /* this is for the come up effect */
+  overflow: hidden;
+}
+
+#page8 #page8-content .page8-text-box h1 {
+  font-size: 5.3vw;
+  font-weight: 400;
+  color: #151414;
+  text-align: center;
+}
+
+#page8 #page8-content .page8-text-box h1 span {
+  color: #151414;
+  text-decoration: underline 0.23vw;
+}
+
+#page8 #page8-bottom-img-container {
+  /* we just gave it display flex and center and gave the img separate height and width to make it center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+  /* background-color: darksalmon; */
+}
+
+#page8 #page8-bottom-img-container img {
+  height: 20.8vw;
+  width: 22.22vw;
+  object-position: bottom;
+  object-fit: cover;
+  /* as per the site to make it more margin from sides */
+  margin: 2.77vw;
+}
+
+#page9 {
+  width: 100%;
+  padding: 3.47vw 1.38vw;
+  padding-bottom: 1.38vw;
+}
+
+#page9 h1 {
+  font-size: 7.5vw;
+  font-weight: 400;
+  color: #695f53;
+  cursor: pointer;
+}
+
+#page9 h1 span {
+  color: #e7cfb1;
+  text-decoration: underline;
+}
+
+#page9 #page9-bottom-nav {
+  display: flex;
+  align-items: center;
+  height: 4.16vw;
+  margin-top: 3.47vw;
+  justify-content: space-between;
+}
+
+#page9 #page9-bottom-nav h4 {
+  font-weight: 500;
+  transition: all linear 0.2s;
+  font-size: 0.83vw;
+  cursor: pointer;
+  color: #fff;
+}
+
+#page9 #page9-bottom-nav h4:hover {
+  color: #f8ac75;
+}
+
+@keyframes svgAnime {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
